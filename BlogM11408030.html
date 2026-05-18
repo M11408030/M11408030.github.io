@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「花」心大發現：關於鬱金香的瘋狂事 - M11408030</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tulip: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fb7185 0%, #e11d48 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px) scale(1.01);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(251, 113, 133, 0.4);
+        }
+        ::selection {
+            background: #fb7185;
+            color: white;
+        }
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            opacity: 0.1;
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar selection:bg-tulip-400 selection:text-white">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-50">
+        <div id="progress" class="h-full bg-gradient-to-r from-tulip-400 to-tulip-600 w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-tulip-500/20 blur-[120px] rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
+        </div>
+
+        <div class="container mx-auto z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full glass-card border-tulip-500/30 text-tulip-300 text-sm font-semibold tracking-wider uppercase">
+                        <span class="flex h-2 w-2 rounded-full bg-tulip-500 mr-3 animate-ping"></span>
+                        Spring Special 2024
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+                        「花」心大發現：<br/>
+                        <span class="gradient-text">鬱金香的瘋狂事</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed">
+                        這花長得像杯子，卻裝滿了人類上千年的欲望、財富與科技。帶你穿透五顏六色的花瓣，看看這朵「網紅花」背後那些既優雅又硬核的秘密。
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-tulip-400 border-2 border-dark-900 flex items-center justify-center text-xs font-bold">M</div>
+                            <div class="w-10 h-10 rounded-full bg-blue-500 border-2 border-dark-900 flex items-center justify-center text-xs font-bold">11</div>
+                        </div>
+                        <span class="text-slate-400 text-sm">Author: <strong class="text-white">M11408030</strong> • 5 min read</span>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-tulip-500 to-purple-600 rounded-[32px] opacity-20 blur-2xl group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="media-container relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl border border-white/10">
+                        <img src='https://opal.google/board/blobs/c5e25422-3009-4701-9055-969830f667c2' alt='Tulip Banner' class="transform group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-24 space-y-32">
+        
+        <!-- Intro Text -->
+        <section class="max-w-4xl mx-auto">
+            <p class="text-2xl md:text-3xl leading-relaxed text-slate-300 font-light italic border-l-4 border-tulip-500 pl-8">
+                提到春天，你會想到什麼？是漸暖的陽光，還是那抹揮之不去的過敏性鼻炎？對全球園藝迷來說，春天的第一聲春雷，其實是鬱金香綻放的號角。
+            </p>
+        </section>
+
+        <!-- Section 1: Identity -->
+        <section class="space-y-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">一、 鬱金香的身分證</h2>
+                    <p class="text-slate-400">百變花后的基本資料與身世之謎</p>
+                </div>
+                <div class="h-px flex-grow mx-8 bg-slate-800 mb-4 hidden md:block"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 glass-card p-8 bento-item relative overflow-hidden">
+                    <div class="step-number">01</div>
+                    <h3 class="text-2xl font-bold mb-4 text-tulip-300">出身名門與變形金剛</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        從生物分類學來看，鬱金香是百合科（Liliaceae）的座上賓，與百合是遠親。它最迷人的地方在於那個「胖胖的球根（鱗莖）」，那是它的能量中心，也是變魔法的基地。如果你以為它只有那種規規矩矩的「杯形」，那你就太小看它的時尚造詣了。
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-tulip-500/10 text-tulip-400 text-xs border border-tulip-500/20">鸚鵡型</span>
+                        <span class="px-3 py-1 rounded-full bg-tulip-500/10 text-tulip-400 text-xs border border-tulip-500/20">百合型</span>
+                        <span class="px-3 py-1 rounded-full bg-tulip-500/10 text-tulip-400 text-xs border border-tulip-500/20">重瓣型</span>
+                    </div>
+                </div>
+                <div class="glass-card p-8 bento-item bg-tulip-600/10 border-tulip-500/30 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold mb-4">全球中央廚房：荷蘭</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        目前荷蘭包攬了全球約 <span class="text-2xl font-bold text-white">70%</span> 的產量，堪稱全球花卉的「超級中央廚房」。從育種到外銷，這已經是一場精密的國際貿易。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Financial History -->
+        <section class="relative">
+            <div class="absolute -left-24 top-0 w-64 h-64 bg-tulip-600/20 blur-[100px] rounded-full"></div>
+            <div class="glass-card p-12 relative z-10 border-tulip-500/20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl font-bold">二、 史上最狂的「花錢」故事</h2>
+                        <p class="text-tulip-400 font-semibold tracking-widest uppercase text-sm">Tulip Mania / 鬱金香狂熱</p>
+                        <p class="text-slate-300 leading-relaxed">
+                            歷史學家總是喜歡拿鬱金香來嘲諷人類的貪婪。在1634年至1637年的荷蘭，一株稀有品種的球根（例如著名的「奧古斯都」）竟然可以換取<span class="text-white font-bold border-b-2 border-tulip-500">阿姆斯特丹運河旁的一棟豪宅</span>。
+                        </p>
+                        <blockquote class="border-l-4 border-tulip-500 pl-6 py-2 text-slate-400 italic">
+                            人們不再關心花美不美，只在意它明天會不會漲。這可能是人類史上第一次發現：當所有人都瘋狂時，現實與虛擬的界線會模糊。
+                        </blockquote>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-square glass-card flex flex-col items-center justify-center p-4 text-center hover:bg-tulip-500/20 transition-colors">
+                            <span class="text-3xl mb-2">🏠</span>
+                            <span class="text-xs uppercase text-slate-400">Value of One Bulb</span>
+                            <span class="font-bold">Luxury Mansion</span>
+                        </div>
+                        <div class="aspect-square glass-card flex flex-col items-center justify-center p-4 text-center hover:bg-tulip-500/20 transition-colors">
+                            <span class="text-3xl mb-2">🇳🇱</span>
+                            <span class="text-xs uppercase text-slate-400">Origin</span>
+                            <span class="font-bold">Netherlands</span>
+                        </div>
+                        <div class="aspect-square glass-card flex flex-col items-center justify-center p-4 text-center hover:bg-tulip-500/20 transition-colors">
+                            <span class="text-3xl mb-2">📉</span>
+                            <span class="text-xs uppercase text-slate-400">Market</span>
+                            <span class="font-bold">First Bubble</span>
+                        </div>
+                        <div class="aspect-square glass-card flex flex-col items-center justify-center p-4 text-center hover:bg-tulip-500/20 transition-colors">
+                            <span class="text-3xl mb-2">🌷</span>
+                            <span class="text-xs uppercase text-slate-400">Status</span>
+                            <span class="font-bold">National Flower</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 & 4: Dual Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card p-10 bento-item flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-tulip-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">三、 當代花后的「硬核」日常</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        這不再是老農夫戴著斗笠彎腰拔草，而是高度機械化的採收程序，配合溫控倉儲與全球航空運送。從泥土到航班的無縫接軌，是現代化農業集約經營的極致展現。
+                    </p>
+                </div>
+                <div class="p-4 bg-dark-900/50 rounded-xl text-sm border border-white/5">
+                    💡 園藝師常說：「沒種過鬱金香，不算過過春天。」
+                </div>
+            </div>
+
+            <div class="glass-card p-10 bento-item flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-tulip-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">四、 美麗背後的「小秘密」</h2>
+                    <p class="text-slate-400 leading-relaxed">
+                        歷史上那些最名貴、帶有不規則火焰條紋的品種，其實是感染了<span class="text-white font-semibold">「碎色病毒（TBV）」</span>。雖然創造了病態的美感，卻會削弱植物的健康。
+                    </p>
+                </div>
+                <div class="mt-8 space-y-3">
+                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                        <span>環境代價：高依賴化肥與農藥</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                        <span>基因遺憾：商業通路禁止交易帶毒品種</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future Tech -->
+        <section class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold">五、 未來鬱金香 2.0</h2>
+                <p class="text-slate-400">面對氣候變遷與科技革新，鬱金香正準備「進化」。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="relative group cursor-pointer">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-tulip-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative glass-card p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="mr-3">🤖</span> AI 機器人與永續農法
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            AI 機器人在花田裡漫步，透過影像辨識精準發現生病植株並針對性除藥，大大降低了化學農藥的使用，讓種花這件事變得更永續、更數位化。
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-tulip-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative glass-card p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="mr-3">🧬</span> 基因黑科技的終極夢想
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            育種家們執著於研發「純藍色」或「香噴噴」的鬱金香。不久的將來，我們真的能擁有一束帶有清香的「藍色妖姬」。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="max-w-4xl mx-auto text-center space-y-12">
+            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-tulip-500 to-orange-500">
+                <div class="px-8 py-3 rounded-full bg-dark-900 font-bold text-xl uppercase tracking-tighter">Conclusion</div>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-black">延續千年的色彩傳奇</h2>
+            <p class="text-xl text-slate-400 leading-loose">
+                回望鬱金香的歷史，它從中亞山谷的一種野花，變成了鄂圖曼皇室的圖騰，演化為波濤洶湧的金融標的，最終成為現代高科技農業的代表。這種花的魅力，在於它既脆弱又強悍，既是自然的饋贈，也是人工干預的傑作。
+            </p>
+            <div class="h-24 w-px bg-gradient-to-b from-tulip-500 to-transparent mx-auto"></div>
+        </section>
+
+        <!-- Interactive Question -->
+        <section class="glass-card p-12 bg-gradient-to-br from-tulip-900/40 to-dark-900 border-tulip-500/30 overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-8 opacity-10">
+                <svg class="w-48 h-48 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="relative z-10 max-w-2xl">
+                <h3 class="text-3xl font-bold mb-6">互動小問答</h3>
+                <p class="text-xl text-tulip-200 mb-8">
+                    看完這篇「花心」報告，如果現在要送一束鬱金香給自己，你最想選擇哪種顏色？是充滿故事感的火焰條紋，還是純粹乾淨的初戀粉？
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="px-8 py-4 bg-tulip-600 hover:bg-tulip-500 rounded-2xl font-bold transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-tulip-600/20">🔥 火焰條紋</button>
+                    <button class="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-2xl font-bold transition-all transform hover:scale-105 active:scale-95 border border-white/10">🌸 初戀粉</button>
+                </div>
+                <div class="mt-8">
+                    <textarea class="w-full bg-dark-900/50 border border-white/10 rounded-2xl p-4 focus:outline-none focus:border-tulip-500/50 text-white placeholder-slate-600" rows="3" placeholder="在下方留言分享..."></textarea>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Progress Bar logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+
+        // Subtle parallax or Reveal animations could be added here
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+
